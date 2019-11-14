@@ -7,6 +7,7 @@ use App\Product;
 use App\Seller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class SellerProductController extends ApiController
@@ -81,6 +82,12 @@ class SellerProductController extends ApiController
                 return $this->errorResponse('Product Must have at least one Category', 409);
             }
         }
+
+        if ($request->has('image')) {
+            Storage::delete($product->image);
+            $product->image = $request->image->store('');
+
+        }
         if ($product->isClean()) {
             return $this->errorResponse('Product need to be changed', 409);
         }
@@ -100,6 +107,7 @@ class SellerProductController extends ApiController
         $this->checkSeller($seller, $product);
         $product->delete();
 
+        Storage::delete($product->image);
         return $this->showOne($product);
     }
 

@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Thu Nov 14 2019 11:54:57 GMT+0200 (Egypt Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-14-10-2019-11-24-51.txt
+
+
+Deleted files:
+
+
+Renamed files:

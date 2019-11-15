@@ -25,6 +25,11 @@ class DatabaseSeeder extends Seeder
 
         DB::table('category_product')->truncate();
 
+        User::flushEventListeners();
+        Category::flushEventListeners();
+        Product::flushEventListeners();
+        Transaction::flushEventListeners();
+
         $usersQuantities = 1000;
         $categoriesQuantities = 30;
         $productsQuantities = 1000;

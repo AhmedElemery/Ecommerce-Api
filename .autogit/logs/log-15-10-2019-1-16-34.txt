@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Nov 15 2019 01:16:34 GMT+0200 (Egypt Standard Time)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/User/UserController.php
+* app/Traits/ApiResponser.php
+* routes/api.php
+
+
+Created files:
+* .autogit/logs/log-15-10-2019-0-46-29.txt
+* app/Mail/UserCreated.php
+
+
+Deleted files:
+
+
+Renamed files:
